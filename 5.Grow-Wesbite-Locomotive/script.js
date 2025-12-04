@@ -63,7 +63,8 @@ websiteLoad();
 function loco(){
   const scrollVar = new LocomotiveScroll({
     el: document.querySelector('main'),
-    smooth: true
+    smooth: true,
+    multiplier: 0.6
 });
 
 //scroll Down btn
