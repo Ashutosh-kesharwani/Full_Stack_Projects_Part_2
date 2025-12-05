@@ -1,6 +1,3 @@
-
-
-
 # 🌱 Grow Website — Locomotive Scroll  
 A modern, smooth-scrolling creative portfolio website built with **Locomotive Scroll**, featuring minimal UI, premium typography, and aesthetic project showcases.
 
