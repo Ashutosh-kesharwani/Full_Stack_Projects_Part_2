@@ -197,6 +197,7 @@ function canvasAnimation1() {
     onUpdate: render
   });
 
+  
   ScrollTrigger.create({
     trigger: "#page5",
     scroller: "#main",

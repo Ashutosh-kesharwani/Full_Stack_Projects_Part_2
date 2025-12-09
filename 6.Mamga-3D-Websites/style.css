@@ -16,6 +16,7 @@ html, body {
   overflow: hidden;
    background-color: #1137CA;
 }
+
 @font-face {
   font-family:Jost;
   src: url('assets/fonts/jost-variable.ttf') format('truetype');
