@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(219, 214, 214);
+    font-family: 'Gilroy', sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: #212121;
+    
+}
+nav{
+    height: 10vh;
+    width: 100%;
+    padding: 4vh 3vw;
+    /* background-color: rgba(30, 0, 107, 0.466); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:2vw;
+}
+nav #logo{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    width: 30%;
+    /* background-color: rgb(1, 24, 68); */
+    padding: 0 1vw ;
+}
+nav #logo h1{
+position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.8vw;
+  font-size: 2.5vw;
+  font-weight: 900;
+  background-image: url('assets/images/Logo-1.webp');
+  background-position: center;
+  background-size: contain;
+  background-clip:text ;
+  overflow: hidden;
+  color: transparent;
+}
+nav #logo video{
+ height: 40px;
+ object-fit: cover;
+ object-position: center;
+ border-radius: 50%;
+
+}
+nav #input-bar{
+ flex :1;
+ min-width:400px ;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ position: relative;
+ /* background-color: red; */
+}
+nav #input-bar input{
+width: 100%;
+ height: 40px;
+ border-radius: 20px;
+ border: none;
+ /* background-color: #17cfc3f6; */
+ color: black;
+ font-size: 20px;
+ font-weight: 500;
+ padding: 3px 6px;
+}
+nav #input-bar #search-data{
+  width: 98%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ position:absolute;
+ /* background-color: rgb(0, 255, 64); */
+ top:100%;
+  border-radius: 20px;
+  display: none;
+
+}
+nav #input-bar #search-data .search-elem{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  border-bottom: 0.5px solid rgb(90, 90, 90);
+  position: relative;
+  z-index: 99;
+
+}
+nav #input-bar #search-data .search-elem h5{
+ font-size: 20px;
+ font-weight: 300;
+ color: #000;
+}
+nav #input-bar input::placeholder{
+font-size: 20px;
+text-align: center;
+font-weight: 500;
+color: black;
+}
+nav #actions{
+    width: 30%;
+    /* background-color: rgb(9, 0, 44); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+nav #actions a{
+text-decoration: none;
+font-size: 17px;
+font-weight: 500;
+transition: all linear 0.2s;
+}
+nav #actions a:hover{
+  font-size: 18px;
+  color: red;
+  font-weight: 600;
+}
+nav #actions .favourite-cart-container i{
+font-size: 17px;
+transition: all linear 0.2s;
+position: relative;
+transition:  all ease 0.15s;
+}
+nav #actions .favourite-cart-container i:hover{
+ font-size: 20px;
+  color: red;
+  font-weight: 600;
+}
+
+nav #actions .favourite-cart-container #fav-section{
+   
+      position: fixed;
+    top: 8%;
+    right: -50%;        /* Hidden */
+    width: 300px;
+    height: 400px;
+    /* background: yellow; */
+    transition: right 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+nav #actions .favourite-cart-container #fav-section .fav-ele{
+    display: flex;  
+    background-color: rgb(0, 0, 0);
+    padding: 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+    border-bottom: 0.5px solid rgb(95, 95, 95);
+}
+nav #actions .favourite-cart-container #fav-section .fav-ele h3{
+ font-size: 20px;
+ font-weight: 300;  
+}
+nav #actions .favourite-cart-container #fav-section .fav-ele img{
+   width: 50px;
+   height: 50px;
+   object-fit: cover;
+   object-position: center;
+}
+/* when click on fav to dhikha do */
+nav #actions .favourite-cart-container #fav-section.show{
+    right: 3%;
+}
+
+
+nav #actions img{
+height: 40px;
+border-radius: 50%;
+object-fit: cover;
+object-position: center;
+
+}
+
+#content{
+  height: 83vh;
+  width: 100%;
+  /* background-color: aqua; */
+  margin-top: 2vh;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#content #video-section{
+    height: 100%;
+    width: 70%;
+    background-color: rgb(0, 0, 0);
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content #video-section #video{
+    height: 80%;
+    width: 94%;
+    /* background-color: rgb(33, 33, 33); */
+    border-radius: 20px;
+    position: relative;
+    z-index: 10;
+}
+#content #video-section #video video{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   object-position: center;
+   position: absolute;
+   z-index: 8;
+}
+#content #video-section #video #video-actions{
+   
+   /* background-color: red; */
+   position: absolute;
+   top:50%;
+   left:45%;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   gap:1vw;
+   z-index: 11;
+   /* display: none; */
+
+}
+
+#content #video-section #video #video-actions .play{
+   font-size: 30px;
+   padding: 25px;
+   background-color: #2121217b;
+   border-radius: 50%;
+   transition:  all linear 0.15s;
+}
+
+
+
+
+#content #video-section #video #video-actions .forward,
+#content #video-section #video #video-actions .backward {
+font-size: 25px;
+}
+
+
+#content #video-section #video img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   object-position: center;
+   position: absolute;
+   z-index: 9;
+}
+#content #video-section #video-text {
+  height: 15%;
+  width: 94%;
+  /* background-color: rgb(0, 76, 0); */
+  border-radius: 20px;
+  padding:  1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#content #video-section #video-text #text {
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(0, 76, 0); */
+  border-radius: 20px;
+  padding:  1vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#content #video-section #video-text #text h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#content #video-section #video-text #text #icons {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ /* background-color: rgb(47, 47, 2); */
+ width: 100%;
+ padding: 3px 6px 20px 0px;
+
+}
+#content #video-section #video-text #text #icons p{
+ font-size: 17px;
+  font-weight: 500;
+}
+#content #video-section #video-text #text #icons i{
+ font-size: 17px;
+  font-weight: 500;
+  transition: all linear 0.15s;
+  transform: scale(1);
+}
+#content #video-section #video-text #text i:hover{
+ transform: scale(1.3);
+ color: red;
+}
+#content #suggestions{
+    height: 100%;
+    width: 30%;
+    /* background-color: rgb(136, 136, 136); */
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vw 3vh 1vw ;
+    overflow-y: auto;
+    gap:2vw;
+}
+#content #suggestions::-webkit-scrollbar{
+   display: none;
+}
+#content #suggestions .video-card{
+    height: 150px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    border-bottom: 0.5px solid rgba(197, 197, 197, 0.679) ;
+    padding-bottom: 2vh;
+    padding:2vh 0 2vh 1vw ;
+}
+#content #suggestions .video-card:nth-child(1){
+    border-top: 0.5px solid rgba(197, 197, 197, 0.679) ;
+    padding-top: 2vh;
+}
+#content #suggestions .video-card .video-thumbnail{
+    height: 100px;
+    width: 40%;
+    background-color: rgb(88, 88, 167);
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#content #suggestions .video-card .video-thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover ;
+    object-position: center;
+}
+#content #suggestions .video-card .video-thumbnail-text{
+    height: 100%;
+    width: 60%;
+    /* background-color: rgb(88, 167, 92); */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-around ;
+    padding:0px 23px;
+}
+#content #suggestions .video-card h3{
+   font-size: 15px;
+   white-space: nowrap;
+   font-weight: 600;
+}
+
+#content #suggestions .video-card button{
+   font-size: 17px;
+   font-weight: 300;
+   background-color: #db1616;
+   border: none;
+   padding: 2px 10px;
+   border-radius: 3px;
+   transform: all linear 0.15s;
+   text-align: start;
+}
+#content #suggestions .video-card button:active{
+ scale: 0.9;
+}
+footer{
+    height: 5vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+footer h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: url('assets/images/Logo-1.webp');
+    background-clip: text;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    font-weight: 900;
+    color: transparent;
+}
+
+ 
